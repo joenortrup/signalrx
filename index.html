@@ -457,7 +457,7 @@ Tone: confident, direct, warm, non-academic. This is a consulting deliverable. U
 function renderReport(text){
   document.getElementById('rx-loading').style.display='none';
   document.getElementById('rx-report').style.display='block';
-  document.getElementById('rx-title').textContent=`${respondent.org} — SignalRx Rx Roadmap`;
+  document.getElementById('rx-title').textContent=`${respondent.org} — Your Signal Roadmap`;
   document.getElementById('rx-meta').textContent=`${respondent.name} · ${respondent.role} · ${SIZE_LABELS[orgSize]||orgSize} · Overall score: ${totalScore}/200`;
   const html=text
     .replace(/###\s+(.+)/g,'<h3>$1</h3>')
