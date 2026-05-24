@@ -4,12 +4,16 @@
     "api/rx.js": {
       "memory": 1024,
       "maxDuration": 60
+    },
+    "api/save.js": {
+      "memory": 1024,
+      "maxDuration": 30
     }
   },
   "routes": [
     {
-      "src": "/api/rx",
-      "dest": "/api/rx.js"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
