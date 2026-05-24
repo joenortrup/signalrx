@@ -10,23 +10,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <style>
     :root {
-      --green: #1D9E75;
-      --green-dark: #0F6E56;
-      --green-light: #E1F5EE;
-      --green-deep: #085041;
-      --text-primary: #111827;
-      --text-secondary: #4B5563;
-      --text-tertiary: #9CA3AF;
-      --bg-primary: #FFFFFF;
-      --bg-secondary: #F9FAFB;
-      --bg-tertiary: #F3F4F6;
-      --border: #E5E7EB;
-      --border-light: #F3F4F6;
-      --radius-sm: 6px;
-      --radius-md: 8px;
-      --radius-lg: 12px;
-      --shadow: 0 1px 3px rgba(0,0,0,0.08);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --green: #1D9E75; --green-dark: #0F6E56; --green-light: #E1F5EE; --green-deep: #085041;
+      --text-primary: #111827; --text-secondary: #4B5563; --text-tertiary: #9CA3AF;
+      --bg-primary: #FFFFFF; --bg-secondary: #F9FAFB; --bg-tertiary: #F3F4F6;
+      --border: #E5E7EB; --border-light: #F3F4F6;
+      --radius-sm: 6px; --radius-md: 8px; --radius-lg: 12px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08); --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'DM Sans', sans-serif; color: var(--text-primary); background: var(--bg-secondary); min-height: 100vh; }
@@ -53,7 +42,7 @@
     .size-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 2rem; }
     .size-btn { padding: 12px 8px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-primary); color: var(--text-secondary); font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; text-align: center; line-height: 1.4; }
     .size-btn:hover { border-color: var(--green); color: var(--text-primary); }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--green); color: #fff; border: none; border-radius: var(--radius-md); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; letter-spacing: 0.01em; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--green); color: #fff; border: none; border-radius: var(--radius-md); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
     .btn-primary:hover { background: var(--green-dark); }
     .btn-primary:disabled { background: #9FE1CB; cursor: not-allowed; }
     .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: transparent; color: var(--text-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer; transition: all 0.15s; }
@@ -72,7 +61,7 @@
     .scale-labels { display: flex; justify-content: space-between; margin-top: 6px; }
     .scale-lbl { font-size: 11px; color: var(--text-tertiary); }
     .srx-textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.6; background: var(--bg-primary); color: var(--text-primary); outline: none; resize: vertical; min-height: 90px; transition: border-color 0.2s; }
-    .srx-textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(29,158,117,0.1); }
+    .srx-textarea:focus { border-color: var(--green); }
     .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); }
     .complete-wrap { padding: 2.5rem 2rem; text-align: center; }
     .check-circle { width: 64px; height: 64px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
@@ -103,7 +92,7 @@
     .rx-report-meta { font-size: 13px; color: var(--text-tertiary); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-light); }
     .rx-body { font-size: 15px; line-height: 1.8; color: var(--text-primary); }
     .rx-body p { margin-bottom: 1.25rem; }
-    .rx-body h3 { font-family: 'DM Serif Display', serif; font-size: 19px; font-weight: 400; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .rx-body h3 { font-family: 'DM Serif Display', serif; font-size: 19px; font-weight: 400; margin: 2rem 0 0.75rem; }
     .rx-body strong { font-weight: 500; }
     .rx-cta-box { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 2rem; text-align: center; border: 1px solid var(--border-light); }
     .rx-cta-title { font-family: 'DM Serif Display', serif; font-size: 18px; margin-bottom: 0.5rem; }
@@ -167,7 +156,7 @@
     <div class="complete-wrap">
       <div class="check-circle"><i class="ti ti-check" style="font-size:28px;color:#1D9E75"></i></div>
       <h2 class="complete-hl">Diagnostic complete.</h2>
-      <p class="complete-sub">Reviewing your responses and building your personalized Rx roadmap now.</p>
+      <p class="complete-sub">Reviewing your responses and building your personalized Signal Roadmap now.</p>
       <div class="score-grid" id="score-grid"></div>
       <div class="divider"></div>
       <div class="total-box">
@@ -178,7 +167,7 @@
           <span class="tier-badge" id="tier-badge"></span>
         </div>
       </div>
-      <button class="btn-primary" id="rx-btn" onclick="generateRx()" type="button"><i class="ti ti-brain"></i> Generate my Rx roadmap</button>
+      <button class="btn-primary" id="rx-btn" onclick="generateRx()" type="button"><i class="ti ti-brain"></i> Generate my Signal Roadmap</button>
     </div>
   </div>
 
@@ -186,11 +175,11 @@
     <div class="rx-wrap">
       <div class="rx-loading" id="rx-loading">
         <div class="rx-spinner"></div>
-        <p class="rx-loading-txt">Analyzing your signal profile<br>and building your personalized Rx roadmap...<br><br><em style="font-size:13px;color:#9CA3AF;">This takes about 20–30 seconds.</em></p>
+        <p class="rx-loading-txt">Analyzing your signal profile<br>and building your personalized roadmap...<br><br><em style="font-size:13px;color:#9CA3AF;">This takes about 20–30 seconds.</em></p>
       </div>
       <div class="rx-report" id="rx-report">
         <p class="rx-report-eyebrow">SignalRx Diagnostic Report — Powered by CBOS AI</p>
-        <h2 class="rx-report-title" id="rx-title">Your SignalRx Rx Roadmap</h2>
+        <h2 class="rx-report-title" id="rx-title">Your Signal Roadmap</h2>
         <p class="rx-report-meta" id="rx-meta"></p>
         <div class="rx-body" id="rx-body"></div>
         <div class="rx-cta-box">
@@ -434,23 +423,40 @@ Tone: confident, direct, warm, non-academic. This is a consulting deliverable. U
     const response=await fetch('/api/rx',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        messages:[{role:'user',content:prompt}]
-      })
+      body:JSON.stringify({messages:[{role:'user',content:prompt}]})
     });
-    if(!response.ok){
-      const errData=await response.json();
-      throw new Error(JSON.stringify(errData));
-    }
+    if(!response.ok) throw new Error('API error');
     const data=await response.json();
     const text=data.content.map(b=>b.text||'').join('');
+
+    // Save to Supabase
+    try {
+      await fetch('/api/save',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          name:respondent.name, role:respondent.role, org:respondent.org,
+          industry:respondent.industry, email:respondent.email, phone:respondent.phone,
+          org_size:sizeLabel,
+          score_leadership:getCatScore(0), score_kpi:getCatScore(1),
+          score_signal:getCatScore(2), score_consumer:getCatScore(3),
+          score_ops:getCatScore(4), score_trust:getCatScore(5),
+          score_ppi:getCatScore(6), score_ecosystem:getCatScore(7),
+          total_score:totalScore, tier:tier,
+          open_leadership:answers['c0_q5']||'', open_kpi:answers['c1_q5']||'',
+          open_signal:answers['c2_q5']||'', open_consumer:answers['c3_q5']||'',
+          open_ops:answers['c4_q5']||'', open_trust:answers['c5_q5']||'',
+          open_ppi:answers['c6_q5']||'', open_ecosystem:answers['c7_q5']||'',
+          rx_report:text
+        })
+      });
+    } catch(saveErr){ console.log('Save error:', saveErr); }
+
     renderReport(text);
   }catch(err){
     document.getElementById('rx-loading').style.display='none';
     document.getElementById('rx-report').style.display='block';
-    document.getElementById('rx-body').innerHTML=`<div class="rx-error"><strong>Analysis unavailable.</strong> There was a problem connecting to the AI engine. Please contact <a href="https://www.signalrevsystems.com">SignalRev Systems</a> directly.</div>`;
+    document.getElementById('rx-body').innerHTML=`<div class="rx-error"><strong>Analysis unavailable.</strong> Please contact <a href="https://www.signalrevsystems.com">SignalRev Systems</a> directly.</div>`;
   }
 }
 
