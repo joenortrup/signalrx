@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     const payload = {
       model: 'claude-sonnet-4-5',
-      max_tokens: 1024,
+      max_tokens: 2000,
       messages: body.messages
     };
 
