@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
   try {
     const body = req.body;
-    
+
     const payload = {
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1024,
@@ -33,13 +33,14 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
-    if (!response.ok) {
-      return res.status(response.status).json({ error: data });
-    }
-
-    return res.status(200).json(data);
+    // Return everything including errors so we can see what Anthropic says
+    return res.status(200).json({
+      httpStatus: response.status,
+      anthropicResponse: data,
+      payloadSent: payload
+    });
 
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    return res.status(200).json({ error: error.message });
   }
 }
